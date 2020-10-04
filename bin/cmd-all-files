@@ -1,0 +1,20 @@
+#!/bin/bash
+
+USAGE="cmd-all-files ../path/to/directory \".webp\" \"/bin/cmd/to/run/on/every/file FP -o ../output/BN.jpg\""
+DIR=$1
+[[ ! -z "$DIR" ]] && echo "Directory = $DIR" || echo "No directory provided: $USAGE"
+FILE_EXT=$2
+[[ ! -z "$FILE_EXT" ]] && echo "File Extension = $FILE_EXT" || echo "No file extension provided: $USAGE"
+CMD=$3
+[[ ! -z "$CMD" ]] && echo "Command = $CMD" || echo "No command provided: $USAGE"
+
+REPLACE_FILEPATH="FP"
+REPLACE_BASENAME="BN"
+
+for filename in $DIR/*$FILE_EXT; do
+    cmd=${CMD//$REPLACE_FILEPATH/$filename}
+    bn=$(basename $filename $FILE_EXT)
+    cmd=${cmd//$REPLACE_BASENAME/$bn}
+    echo "$cmd"
+    $cmd
+done
