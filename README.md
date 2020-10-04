@@ -2,6 +2,10 @@
 
 Run a command on every file in a directory
 
+## Install
+
+Copy the executable in `/bin` to `/usr/local/bin` on your computer to make it accessible to shell.
+
 ## Usage
 
 - `$1` input directory
@@ -11,13 +15,13 @@ Run a command on every file in a directory
 - `BN` placeholder in command for the basename with no file extension
 
 ```
-./script.sh ../path/to/directory ".webp" "/bin/cmd/to/run/on/every/file FP -o ../output/BN.jpg"
+$ cmd-all-files ../path/to/directory ".webp" "/bin/cmd/to/run/on/every/file FP -o ../output/BN.jpg"
 ```
 
 ## Test
 
 ```
-./script.sh ./test-input .webp "echo FP -o ../new/BN.jpg"
+c$ md-all-files ./test-input .webp "echo FP -o ../new/BN.jpg"
 ```
 
 ## Example
@@ -25,5 +29,5 @@ Run a command on every file in a directory
 Convert all webp to jpeg using [`brew install webp`](https://www.majilesh.com/convert-webp/) tool.
 
 ```
-./script.sh ./test-input .webp "dwebp FP -o ./test-output/BN.jpg"
+$ cmd-all-files ./test-input .webp "dwebp FP -o ./test-output/BN.jpg"
 ```
