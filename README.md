@@ -4,7 +4,11 @@ Run a command on every file in a directory
 
 ## Install
 
-Copy the executable in `/bin` to `/usr/local/bin` on your computer to make it accessible to shell.
+Run the following to install the executable to your `/usr/local/bin` directory and make it accessible to your Terminal shell.
+
+```
+$ curl -s https://raw.githubusercontent.com/adrw/cmd-all-files/master/install.sh | bash -s
+```
 
 ## Usage
 
@@ -21,7 +25,7 @@ $ cmd-all-files ../path/to/directory ".webp" "/bin/cmd/to/run/on/every/file FP -
 ## Test
 
 ```
-c$ md-all-files ./test-input .webp "echo FP -o ../new/BN.jpg"
+$ cmd-all-files ./test-input .webp "echo FP -o ../new/BN.jpg"
 ```
 
 ## Example
