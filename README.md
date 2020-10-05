@@ -33,5 +33,6 @@ $ cmd-all-files ./test-input .webp "echo FP -o ../new/BN.jpg"
 Convert all webp to jpeg using [`brew install webp`](https://www.majilesh.com/convert-webp/) tool.
 
 ```
+$ brew install webp
 $ cmd-all-files ./test-input .webp "dwebp FP -o ./test-output/BN.jpg"
 ```
