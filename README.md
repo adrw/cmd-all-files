@@ -7,7 +7,7 @@ Run a command on every file in a directory
 Run the following to install the executable to your `/usr/local/bin` directory and make it accessible to your Terminal shell.
 
 ```
-$ curl -s https://raw.githubusercontent.com/adrw/cmd-all-files/master/install.sh | bash -s
+$ curl -s https://raw.githubusercontent.com/adrw/cmd-all-files/main/install.sh | bash -s
 ```
 
 ## Usage
