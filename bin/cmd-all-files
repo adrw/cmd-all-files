@@ -2,11 +2,11 @@
 
 USAGE="cmd-all-files ../path/to/directory \".webp\" \"/bin/cmd/to/run/on/every/file FP -o ../output/BN.jpg\""
 DIR=$1
-[[ ! -z "$DIR" ]] && echo "Directory = $DIR" || echo "No directory provided: $USAGE"
+[[ ! -z "$DIR" ]] && echo "Directory = $DIR" || echo "No directory provided: $USAGE" && exit 1
 FILE_EXT=$2
-[[ ! -z "$FILE_EXT" ]] && echo "File Extension = $FILE_EXT" || echo "No file extension provided: $USAGE"
+[[ ! -z "$FILE_EXT" ]] && echo "File Extension = $FILE_EXT" || echo "No file extension provided: $USAGE" && exit 1
 CMD=$3
-[[ ! -z "$CMD" ]] && echo "Command = $CMD" || echo "No command provided: $USAGE"
+[[ ! -z "$CMD" ]] && echo "Command = $CMD" || echo "No command provided: $USAGE" && exit 1
 
 REPLACE_FILEPATH="FP"
 REPLACE_BASENAME="BN"
