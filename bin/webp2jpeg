@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cmd-all-files ./ ".webp" "dwebp FP -o ./BN.jpg"
