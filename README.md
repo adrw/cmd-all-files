@@ -19,7 +19,7 @@ $ curl -s https://raw.githubusercontent.com/adrw/cmd-all-files/main/install.sh |
 - `BN` placeholder in command for the basename with no file extension
 
 ```
-$ cmd-all-files ../path/to/directory ".webp" "/bin/cmd/to/run/on/every/file FP -o ../output/BN.jpg"
+$ cmd-all-files [directory] [dot prefixed file extension] [command]
 ```
 
 ## Test

@@ -1,12 +1,17 @@
 #!/bin/bash
 
-USAGE="cmd-all-files ../path/to/directory \".webp\" \"/bin/cmd/to/run/on/every/file FP -o ../output/BN.jpg\""
+USAGE="Usage: cmd-all-files [directory] [dot prefixed file extension] [command]"
 DIR=$1
-[[ ! -z "$DIR" ]] && echo "Directory = $DIR" || echo "No directory provided: $USAGE" && exit 1
+[[ ! -z "$DIR" ]] && echo "Directory = $DIR" || echo "No directory provided. $USAGE"
 FILE_EXT=$2
-[[ ! -z "$FILE_EXT" ]] && echo "File Extension = $FILE_EXT" || echo "No file extension provided: $USAGE" && exit 1
+[[ ! -z "$FILE_EXT" ]] && echo "File Extension = $FILE_EXT" || echo "No file extension provided. $USAGE"
 CMD=$3
-[[ ! -z "$CMD" ]] && echo "Command = $CMD" || echo "No command provided: $USAGE" && exit 1
+[[ ! -z "$CMD" ]] && echo "Command = $CMD" || echo "No command provided. $USAGE"
+
+if (( $# != 3 )); then
+    echo "Illegal number of parameters: $#. $USAGE"
+    exit 1
+fi
 
 REPLACE_FILEPATH="FP"
 REPLACE_BASENAME="BN"
