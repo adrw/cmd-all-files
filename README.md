@@ -28,7 +28,7 @@ $ cmd-all-files [directory] [dot prefixed file extension] [command]
 $ cmd-all-files ./test-input .webp "echo FP -o ../new/BN.jpg"
 ```
 
-## Example
+## Example & webp2jpeg
 
 Convert all webp to jpeg using [`brew install webp`](https://www.majilesh.com/convert-webp/) tool.
 
@@ -37,7 +37,7 @@ $ brew install webp
 $ cmd-all-files ./test-input .webp "dwebp FP -o ./test-output/BN.jpg"
 ```
 
-Or use the included utility that converts all webp images in the current directory to jpeg
+Or use the included utility that also is installed with the above script that converts all webp images in the current directory to jpeg.
 
 ```
 $ webp2jpeg
